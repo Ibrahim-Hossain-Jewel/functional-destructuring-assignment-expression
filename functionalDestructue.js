@@ -19,4 +19,35 @@ z = temp;
 //now swap two variable using destructure assignment operator
 [x,z] = [z,x];
 console.log(x,z);
+//use function with destructuring expression;
+function returnArray() {
+    return ['nasima','toshiba','jewel','momena','mofizur'];
+}
+const [nasima,toshiba,jewel,momena,mofizur] = returnArray();
+console.log(nasima);
 
+//now make a function with filter() method in javascript.
+function RarrayFilter(arr,term) {
+    return arr.filter((t) => {return t=== term});
+}
+const m = ['nasima','toshiba','jewel','momena','mofizur'];
+//now apply destructuring on the filter() method.
+const [result1] = RarrayFilter(m,'jewel');
+    console.log(result1);
+// you can check an gradient is present or not inside a array using filter() method.
+
+const [result2] = RarrayFilter([
+    'sokina','morjina','jamena','amena','momena'
+,'jewel'],'sokina');
+console.log(result2);
+
+//can ignore some value when performing destructuring using comma operator;
+const AbunchOfNumber = [1,2,3,4,5,6,7];
+const [number1,,,,number2,number3] = AbunchOfNumber;
+console.log(number2);
+//Can use the rest pattern
+function sayHi(firstArg, ...restOfArg) {
+    console.log(`Hi, ${firstArg}`);
+    console.log(restOfArg);//Rest operator containing all other argument as array return according to that
+}
+sayHi('jewel',12121,'other argument in javascript');
