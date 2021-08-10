@@ -51,3 +51,13 @@ function sayHi(firstArg, ...restOfArg) {
     console.log(restOfArg);//Rest operator containing all other argument as array return according to that
 }
 sayHi('jewel',12121,'other argument in javascript');
+//Can use rest pattern in an array.
+const student = ['simul','parul','korim','jubaer'];
+const [simulString,parulString,...otherStudent] = student;
+console.log(simulString);
+console.log(parulString);
+//Now filter the otherStudent rest variable.
+console.log(otherStudent.filter((data)=>{
+    return data === 'korim';  //filter() method used on an array.
+}));
+
